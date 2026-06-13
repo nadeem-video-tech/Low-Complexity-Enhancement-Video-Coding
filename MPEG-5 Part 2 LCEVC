@@ -1,0 +1,223 @@
+Low Complexity Enhancement Video Coding
+Main Idea of LCEVC
+Instead of replacing existing codecs like:
+x264
+x265
+AOMedia Video 1
+LCEVC adds an enhancement layer on top of a base codec.
+
+Basic Principle
+Original Video
+       ↓
+Low-Resolution Base Encode
+       ↓
+Enhancement Residual Layer
+       ↓
+LCEVC Reconstruction
+       ↓
+High-Quality Output
+
+The base codec compresses:
+Lower-resolution video
+LCEVC then:
+Restores detail
+Enhances quality
+Improves sharpness
+
+Why LCEVC Was Developed
+Modern codecs like:
+HEVC
+AV1
+VVC
+
+provide high compression efficiency but suffer from:
+Very high computational complexity
+Expensive encoding
+Large power consumption
+Difficult real-time deployment
+
+LCEVC attempts to solve this.
+Adds residual corrections
+using lightweight processing.
+
+Key Objectives
+1. Lower Computational Complexity
+Can use:
+Simpler base encoder
+Lower-resolution encoding
+
+Result:
+Faster encoding
+
+2. Better Compression Efficiency
+Achieves:
+Better quality at same bitrate
+or
+Lower bitrate at same quality
+
+3. Real-Time Streaming Support
+Useful for:
+Live streaming
+Esports
+Mobile streaming
+Cloud gaming
+
+4. Hardware Compatibility
+Works with existing decoder hardware.
+This is a major advantage.
+
+Architecture
+Two-Layer System
+A. Base Layer
+Encoded using conventional codec:
+AVC
+HEVC
+AV1
+at reduced resolution.
+
+B. Enhancement Layer
+Contains:
+Residual detail information
+Sharpening enhancement
+Reconstruction guidance
+Very lightweight compared to full codec complexity.
+
+Example Workflow
+Suppose:
+Final output required = 4K
+Traditional approach:
+Encode full 4K HEVC
+LCEVC approach:
+Encode 1080p base layer
+Add enhancement layer
+Reconstruct near-4K quality
+
+Benefits:
+Lower complexity
+Faster encoding
+Lower bandwidth
+
+Comparison with Traditional Codecs
+| Feature                | Traditional Codec | LCEVC  |
+| ---------------------- | ----------------- | ------ |
+| Complexity             | High              | Lower  |
+| Encoding Speed         | Slower            | Faster |
+| Hardware Requirement   | Heavy             | Lower  |
+| Real-Time Capability   | Difficult         | Better |
+| Enhancement Layer      | No                | Yes    |
+| Backward Compatibility | Limited           | Good   |
+
+Important Components
+1. Upscaling
+Base layer is upscaled to target resolution.
+
+2. Residual Enhancement
+Enhancement data corrects:
+Blur
+Missing texture
+Compression artifacts
+
+3. Lightweight Processing
+Uses:
+Simple filtering
+Low-complexity enhancement tools
+instead of extremely complex prediction structures.
+
+Applications
+A. Live Streaming
+Very important use case.
+Especially for:
+Esports
+OTT
+Sports broadcasting
+
+B. Mobile Streaming
+Lower power consumption.
+
+C. Cloud Gaming
+Low latency + lower bandwidth.
+
+D. Video Conferencing
+Improved quality at constrained bitrate.
+
+LCEVC in Esports Streaming
+
+LCEVC is attractive for esports because it enables:
+Lower latency
+Faster encoding
+Lower GPU usage
+High visual quality
+
+Critical for:
+Fast motion
+HUD details
+Text sharpness
+
+Relationship with AI
+LCEVC itself is not fully neural compression, but:
+AI enhancement tools can be integrated
+AI upscaling may complement LCEVC
+
+Future systems may combine:
+Neural super-resolution
+LCEVC enhancement layers
+
+Comparison with AV1/HEVC/VVC
+| Codec        | Compression    | Complexity             |
+| ------------ | -------------- | ---------------------- |
+| AVC          | Moderate       | Low                    |
+| HEVC         | High           | High                   |
+| AV1          | Very High      | Very High              |
+| VVC          | Extremely High | Extremely High         |
+| LCEVC + AVC  | Improved       | Moderate               |
+| LCEVC + HEVC | Very High      | Lower than native HEVC |
+
+
+Advantages
+1. Faster Encoding
+Major industrial benefit.
+
+2. Reduced CDN Cost
+Lower bitrate streaming.
+
+3. Lower Power Usage
+Good for:
+Mobile
+Edge devices
+
+4. Software Upgrade Path
+Can enhance existing codec deployments.
+
+Limitations
+1. Additional Enhancement Layer
+
+Requires:
+Extra signaling
+Additional decoder logic
+
+2. Ecosystem Adoption
+
+Still smaller than:
+AVC
+HEVC
+AV1
+
+3. Standardization Adoption Speed
+Industry adoption is gradual.
+
+Industry Relevance
+Potential sectors:
+OTT platforms
+Esports streaming
+Cloud gaming
+Automotive streaming
+Mobile video delivery
+
+Companies interested in low-complexity streaming:
+NVIDIA
+Amazon Web Services
+Netflix
+Twitch
+
+LCEVC is a low-complexity enhancement framework that improves video compression efficiency by combining a low-resolution base codec with a lightweight enhancement layer 
+to deliver higher quality streaming at lower computational cost.
